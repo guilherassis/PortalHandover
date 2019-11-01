@@ -1,0 +1,196 @@
+ul.sdt_menu{
+	margin:0;
+	padding:0;
+	list-style: none;
+	font-family:"Myriad Pro", "Trebuchet MS", sans-serif;
+	font-size:14px;
+	width:1020px;
+}
+ul.sdt_menu a{
+	text-decoration:none;
+	outline:none;
+}
+ul.sdt_menu li{
+	float:left;
+	width:170px;
+	height:85px;
+	position:relative;
+	cursor:pointer;
+}
+ul.sdt_menu li > a{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:170px;
+	height:85px;
+	z-index:12;
+	background:transparent url(../../images/overlay.png) no-repeat bottom right;
+	-moz-box-shadow:0px 0px 2px #000 inset;
+	-webkit-box-shadow:0px 0px 2px #000 inset;
+	box-shadow:0px 0px 2px #000 inset;
+}
+ul.sdt_menu li a img{
+	border:none;
+	position:absolute;
+	width:0px;
+	height:0px;
+	bottom:0px;
+	left:85px;
+	z-index:100;
+	-moz-box-shadow:0px 0px 4px #000;
+	-webkit-box-shadow:0px 0px 4px #000;
+	box-shadow:0px 0px 4px #000;
+}
+ul.sdt_menu li span.sdt_wrap{
+	position:absolute;
+	top:25px;
+	left:0px;
+	width:170px;
+	height:60px;
+	z-index:15;
+}
+ul.sdt_menu li span.sdt_active{
+	position:absolute;
+	background:#111;
+	top:85px;
+	width:170px;
+	height:0px;
+	left:0px;
+	z-index:14;
+	-moz-box-shadow:0px 0px 4px #000 inset;
+	-webkit-box-shadow:0px 0px 4px #000 inset;
+	box-shadow:0px 0px 4px #000 inset;
+}
+ul.sdt_menu li span span.sdt_link,
+ul.sdt_menu li span span.sdt_descr,
+ul.sdt_menu li div.sdt_box a{
+	margin-left:15px;
+	text-transform:uppercase;
+	text-shadow:1px 1px 1px #000;
+}
+ul.sdt_menu li span span.sdt_link{
+	color:#fff;
+	font-size:18px;
+	float:left;
+	clear:both;
+}
+ul.sdt_menu li span span.sdt_descr{
+	color:#0B75AF;
+	float:left;
+	clear:both;
+	width:155px; /*For dumbass IE7*/
+	font-size:10px;
+	letter-spacing:1px;
+}
+ul.sdt_menu li div.sdt_box{
+	display:block;
+	position:absolute;
+	width:170px;
+	overflow:hidden;
+	height:170px;
+	top:85px;
+	left:0px;
+	display:none;
+	background:#000;
+}
+ul.sdt_menu li div.sdt_box a{
+	float:left;
+	clear:both;
+	line-height:30px;
+	color:#0B75AF;
+}
+ul.sdt_menu li div.sdt_box a:first-child{
+	margin-top:15px;
+}
+ul.sdt_menu li div.sdt_box a:hover{
+	color:#fff;
+}
+#contactFormContainer {
+	position:absolute;
+	left:668px;
+        top:0px;
+	z-index:100;
+	}
+	
+/* Hides the whole contact form until needed */	
+#contactForm {
+	height:289px;width:558px;
+	background:#515151 url(../../images/login.png) no-repeat 241px 11px; 
+	border:1px solid #929191;
+	padding:7px 12px; 
+	color:#fff;
+	display:none;
+	}   
+
+/* Loading bar that will appear while the ajax magic is happening */
+.bar{
+	display:none; 
+	background:url(../../images/ajax-loader.gif) no-repeat center; 
+	margin-top:100px; 
+	height:40px; width:230px;
+	}
+	
+/* Hides the confirmation message until needed */	
+#messageSent {display:none;}
+
+/* This hides the form validation alert messages until needed */
+#contactForm span { 
+	display:none; 
+	font-size:9px; 
+	line-height:10px; 
+	padding-left:6px; 
+	color:#f5c478;
+	}
+	
+/* Some styling for the contact button */
+#contactFormContainer .contact {
+	height:47px; width:211px;
+	background:url(../../images/contact_me.png); 
+	position:absolute; 
+	left:368px; bottom:-44px; 
+	cursor:pointer;
+	}
+			
+/* Hides the darkening layer for the Modal effect. The z-index is necessary for layering purposes, and be sure to keep the positioning/height/width the same */	
+#backgroundPopup{
+	display:none; 
+	position:fixed; 
+	_position:absolute; 
+	height:100%; width:100%; 
+	top:0; left:0;
+	background:#000; 
+	z-index:90;
+	}  
+	
+/* Form styling from here on out. There is nothing in here that you HAVE to use to get this to work */	
+#contactForm textarea, #contactForm input {
+	width:180px; 
+	background:#6d6d6d url(../images/contact_input.png) repeat-x top; 
+	color:#fff; 
+	border:1px solid #8a8a8a; 
+	height:15px; 
+	line-height:14px; 
+	font-size:11px; 
+	padding:2px 2px 0px;
+	}
+#contactForm input {background-position:0px -20px;}
+#contactForm textarea {height:114px; font-family:Verdana, Geneva, sans-serif;}
+#contactForm .submit {
+	border:1px solid #aba8a8; 
+	background:#e5e5e5; 
+	text-transform:uppercase; 
+	color:#4d4d4d; 
+	font-weight:bold; 
+	padding:7px 16px 7px 14px; 
+	height:37px; width:124px; 
+	cursor:pointer; 
+	float:left; 
+	margin-top:196px;
+	}
+#contactForm .submit:active {background:#cacaca; }
+#contactForm label {padding-left:4px; font-weight:bold;}
+#contactForm p {padding-bottom:8px;}
+#contactForm .input_boxes {float:left; width:204px;}
+
+#dummycontent {padding-top:100px; height:900px; position:relative;}
+.bottomlink {position:absolute; bottom:0;}

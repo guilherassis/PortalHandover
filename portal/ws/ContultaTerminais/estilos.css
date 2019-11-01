@@ -1,0 +1,339 @@
+body {
+	font-family: verdana, helvetica, arial, sans-serif;
+	font-size: 80%;
+	margin: 0;
+	padding: 0;
+}
+FONT
+{
+    FONT-SIZE: 20pt;
+    FONT-WEIGHT: bold;
+    COLOR:#000000;
+    FONT-FAMILY: Verdana;
+}
+FONT.Texto
+{
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold;
+    COLOR:#000080;
+    FONT-FAMILY: Verdana;
+    TEXT-ALIGN: center
+}
+FONT.Titulo
+{
+    FONT-SIZE: 14pt;
+    FONT-WEIGHT: bold;
+    COLOR:#00000;
+    FONT-FAMILY: Verdana;
+    TEXT-ALIGN: center
+}
+EM
+{
+    COLOR: #ff0000;
+    TEXT-ALIGN: right
+}
+
+.tbl1
+{ 
+background-color : #FFF;
+margin-top:0.0em;
+border: 0px solid #222;
+} 
+
+.tbl2
+{ 
+background-repeat: no-repeat; 
+background-color : #FFF;
+margin-top:0.0em;
+border: 0px solid #222;
+}
+
+TD.TI
+{
+FONT-SIZE: 8pt;
+COLOR: #000000;
+FONT-WEIGHT: bold;
+TEXT-ALIGN: right;
+}
+
+TD.Titulo
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    COLOR: #FFFFFF;
+    TEXT-ALIGN: left;
+    BACKGROUND-COLOR: #332F62;
+}
+TR.Exibe
+{
+    FONT-SIZE: 8pt;
+    COLOR: #000000;
+    TEXT-ALIGN: left;
+}
+TR.Exibe1
+{
+    FONT-WEIGHT: bold;
+	FONT-SIZE: 8pt;
+    COLOR: #000000;
+    TEXT-ALIGN: left;
+}
+TR.Exibe2
+{
+    FONT-SIZE: 8pt;
+    COLOR: #FF0000;
+    TEXT-ALIGN: left;
+}
+#navcontainer { width: 100%; border-top: 1px solid #777;}
+
+#navcontainer ul
+{
+	margin-left: 0;	padding-left: 0;
+	list-style-type: none;
+	font-size: 85%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#navcontainer a
+{	display: block;
+	width: 100%;
+	padding: 0.25em;
+	
+	border-bottom: 1px solid #777;
+	color: #333;text-decoration: none;
+}
+#navcontainer a:hover	{background-color: #171;color: #fff;}
+
+
+p,main {
+	font-family: Times,serif;
+	font-size: 95%;
+	color: black;
+}
+
+h1,h2,h3 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	border-bottom: 1px solid #666;
+}
+
+
+
+a {
+
+	color: #119;
+}
+a:visited {
+	color: #007;
+}
+A.HeadLink
+{
+    FONT-SIZE: 8pt;
+    COLOR: #ffffff;
+    TEXT-DECORATION: underline
+}
+A.HeadLink:hover
+{
+    FONT-SIZE: 8pt;
+    COLOR: #ffffff;
+    TEXT-DECORATION: underline
+}
+A
+{
+    FONT-SIZE: 8pt;
+    COLOR: #3434FF;
+    TEXT-DECORATION: none
+}
+A:hover
+{
+    FONT-SIZE: 8pt;
+    COLOR: white;
+    BACKGROUND-COLOR: #00789F;
+    TEXT-DECORATION: underline
+}
+HeadLink
+{
+    COLOR: #ffffff;
+    TEXT-DECORATION: none
+}
+input.botao
+{
+  FONT-FAMILY: Verdana;
+  FONT-SIZE: 9pt;
+  FONT-WEIGHT: bold;
+  FONT-STYLE: ;
+  COLOR: #6F83A8;
+  BACKGROUND-COLOR: #FFFFFF;
+  TEXT-ALIGN: Left;
+}
+input.texto
+{
+  FONT-FAMILY: Verdana;
+  FONT-SIZE: 8pt;
+  FONT-STYLE: ;
+  COLOR: #000000;
+  BACKGROUND-COLOR: #FFFFFF;
+  TEXT-ALIGN: Left;
+}
+
+FONT
+{
+    FONT-SIZE: 20pt;
+    FONT-WEIGHT: bold;
+    COLOR:#000000;
+    FONT-FAMILY: Verdana;
+}
+FONT.Texto
+{
+    FONT-SIZE: 10pt;
+    FONT-WEIGHT: bold;
+    COLOR:#000080;
+    FONT-FAMILY: Verdana;
+    TEXT-ALIGN: center
+}
+EM
+{
+    COLOR: #ff0000;
+    TEXT-ALIGN: right
+}
+.tbl1
+{ 
+background-color : #FFF;
+margin-top:0.0em;
+border: 0px solid #222;
+} 
+
+.tbl2
+{ 
+background-repeat: no-repeat; 
+background-color : #FFF;
+margin-top:0.0em;
+border: 0px solid #222;
+}
+
+TD.TI
+{
+FONT-SIZE: 8pt;
+COLOR: #000000;
+FONT-WEIGHT: bold;
+TEXT-ALIGN: right;
+}
+
+TR.Titulo
+{
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 8pt;
+    COLOR: #FFFFFF;
+    TEXT-ALIGN: center;
+    BACKGROUND-COLOR: #332F62;
+}
+TR.Exibe
+{
+    FONT-SIZE: 8pt;
+    COLOR: #000000;
+    TEXT-ALIGN: left;
+}
+TR.Exibe1
+{
+    FONT-WEIGHT: bold;
+	FONT-SIZE: 8pt;
+    COLOR: #000000;
+    TEXT-ALIGN: left;
+}
+TR.Exibe2
+{
+    FONT-SIZE: 8pt;
+    COLOR: #FF0000;
+    TEXT-ALIGN: left;
+}
+#navcontainer { width: 100%; border-top: 1px solid #777;}
+
+#navcontainer ul
+{
+	margin-left: 0;	padding-left: 0;
+	list-style-type: none;
+	font-size: 85%;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#navcontainer a
+{	display: block;
+	width: 100%;
+	padding: 0.25em;
+	
+	border-bottom: 1px solid #777;
+	color: #333;text-decoration: none;
+}
+#navcontainer a:hover	{background-color: #171;color: #fff;}
+
+
+p,main {
+	font-family: Times,serif;
+	font-size: 95%;
+	color: black;
+}
+
+h1,h2,h3 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	border-bottom: 1px solid #666;
+}
+
+
+
+a {
+
+	color: #119;
+}
+a:visited {
+	color: #007;
+}
+A.HeadLink
+{
+    FONT-SIZE: 8pt;
+    COLOR: #ffffff;
+    TEXT-DECORATION: underline
+}
+A.HeadLink:hover
+{
+    FONT-SIZE: 8pt;
+    COLOR: #ffffff;
+    TEXT-DECORATION: underline
+}
+A
+{
+    FONT-SIZE: 8pt;
+    COLOR: #3434FF;
+    TEXT-DECORATION: none
+}
+A:hover
+{
+    FONT-SIZE: 8pt;
+    COLOR: white;
+    BACKGROUND-COLOR: #00789F;
+    TEXT-DECORATION: underline
+}
+HeadLink
+{
+    COLOR: #ffffff;
+    TEXT-DECORATION: none
+}
+input.botao
+{
+  FONT-FAMILY: Verdana;
+  FONT-SIZE: 9pt;
+  FONT-WEIGHT: bold;
+  FONT-STYLE: ;
+  COLOR: #6F83A8;
+  BACKGROUND-COLOR: #FFFFFF;
+  TEXT-ALIGN: Left;
+}
+input.texto
+{
+  FONT-FAMILY: Verdana;
+  FONT-SIZE: 8pt;
+  FONT-STYLE: ;
+  COLOR: #000000;
+  BACKGROUND-COLOR: #FFFFFF;
+  TEXT-ALIGN: Left;
+}
+

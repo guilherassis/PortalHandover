@@ -1,0 +1,106 @@
+<?php
+// inclusão do arquivo de classes NuSOAP
+require_once('../lib/nusoap.php');
+// criação de uma instância do servidor
+$server = new soap_server;
+// inicializa o suporte a WSDL
+$server->configureWSDL('server.AutenticaUsuario','urn:server.AutenticaUsuario');
+$server->wsdl->schemaTargetNamespace = 'urn:server.AutenticaCplus';
+// registra o método a ser oferecido
+$server->register('AutenticaUsuario', //nome do método
+		array('user' => 'xsd:string', 'password' => 'xsd:string'), //parâmetros de entrada
+		array('codeuser' => 'xsd:integer'), //parâmetros de saída
+			  'urn:server.AutenticaUsuario', //namespace
+			  'urn:server.AutenticaUsuario#AutenticaUsuario', //soapaction
+			  'rpc', //style
+			  'encoded', //use
+			  'Retorna o código do usuário' //documentação do serviço
+);
+
+$server->register('BuscaNomeUsuario', //nome do método
+		array('codeuser' => 'xsd:integer'), //parâmetros de entrada
+		array('nome' => 'xsd:string'), //parâmetros de saída
+			  'urn:server.BuscaNomeUsuario', //namespace
+			  'urn:server.BuscaNomeUsuario#BuscaNomeUsuario', //soapaction
+			  'rpc', //style
+			  'encoded', //use
+			  'Retorna o nome do usuário' //documentação do serviço
+);
+
+$server->register('BuscaDepartamentoUsuario', //nome do método
+		array('codeuser' => 'xsd:integer'), //parâmetros de entrada
+		array('depto' => 'xsd:string'), //parâmetros de saída
+			  'urn:server.BuscaNomeUsuario', //namespace
+			  'urn:server.BuscaNomeUsuario#BuscaNomeUsuario', //soapaction
+			  'rpc', //style
+			  'encoded', //use
+			  'Retorna o departamento do usuário' //documentação do serviço
+);
+
+$ora_user = "way";
+$ora_senha = "way#fim09";
+$ora_sid = "cpprd";
+
+function AutenticaUsuario($user,$password) {
+	global $ora_user,$ora_senha,$ora_sid;
+	$sql = "select login.login, login.codigo, login.depto from vw_login_usuario login, tva2900 u ".
+           "where usr_decode(u.login) = upper('$user') and ".
+           "usr_decode(login.senha) in ('$password', upper('$password')) and ".
+           "login.codigo = u.codusu and login.ativo = 'S'";
+           
+    $ora_conecta = @ocilogon($ora_user,$ora_senha,$ora_sid);
+    
+    $sql = ociparse($ora_conecta,$sql) or die("ERRO NA ANÁLISE DA CLÁUSULA SQL");
+    	
+    $codeuser = null;
+
+    ociexecute($sql,OCI_DEFAULT);
+    $login = $codigo = $depto = "";
+    while(Ocifetch($sql)){
+	    $codeuser  = ociresult($sql,'CODIGO');
+    }
+	return $codeuser;
+}
+
+function BuscaNomeUsuario($user){
+	global $ora_user,$ora_senha,$ora_sid;
+	$sql = "select login.nome from vw_login_usuario login, tva2900 u  ".
+           "where login.codigo = $user and login.codigo = u.codusu and login.ativo = 'S'";
+           
+    $ora_conecta = @ocilogon($ora_user,$ora_senha,$ora_sid);
+    
+    $sql = ociparse($ora_conecta,$sql) or die("ERRO NA ANÁLISE DA CLÁUSULA SQL");
+    	
+    $nome = null;
+
+    ociexecute($sql,OCI_DEFAULT);
+    $login = $codigo = $depto = "";
+    while(Ocifetch($sql)){
+	    $nome  = ociresult($sql,'NOME');
+    }
+	return $nome;
+}
+
+function BuscaDepartamentoUsuario($user){
+	global $ora_user,$ora_senha,$ora_sid;
+	$sql = "select login.depto from vw_login_usuario login, tva2900 u  ".
+           "where login.codigo = $user and login.codigo = u.codusu and login.ativo = 'S'";
+           
+    $ora_conecta = @ocilogon($ora_user,$ora_senha,$ora_sid);
+    
+    $sql = ociparse($ora_conecta,$sql) or die("ERRO NA ANÁLISE DA CLÁUSULA SQL");
+    	
+    $depto = null;
+
+    ociexecute($sql,OCI_DEFAULT);
+    $login = $codigo = $depto = "";
+    while(Ocifetch($sql)){
+	    $depto  = ociresult($sql,'DEPTO');
+    }
+	return $depto;
+}
+
+// requisição para uso do serviço
+$HTTP_RAW_POST_DATA = isset($HTTP_RAW_POST_DATA) ? $HTTP_RAW_POST_DATA : '';
+$server->service($HTTP_RAW_POST_DATA);
+?>
