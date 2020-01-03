@@ -8,14 +8,6 @@
     var $database = "bd_handover";
   	
 
-
-    
-  	/*
-  	var $ip= "localhost";
-  var $user = "root";
-  	var $pass = "usbw";
-  	var $database = "sicoof";
-  	*/
   	function AbreConexao() {
   	
   		$this->conn = mysql_connect ($this->ip,$this->user,$this->pass); // aqui declaramos a var conn como variável da classe
