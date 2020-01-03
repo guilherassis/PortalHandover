@@ -2,9 +2,6 @@
 
     
    function AbreConexao() {
-// NOVA CONEXAO BD OI
-
-
 
    	$ip = "localhost";
    	$user = "root";
